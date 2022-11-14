@@ -16,7 +16,8 @@ SRCS =		my_library/ft_atoi.c \
 			my_library/ft_strdup.c \
 			my_library/error_message.c \
 			my_library/ft_isalpha.c \
-			my_library/ft_isdigit.c
+			my_library/ft_isdigit.c \
+			push_func.c
 
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap_lib.a
@@ -25,12 +26,13 @@ CFLAGS = -Wall -Werror -Wextra
 RM = rm -rf
 LIBC = ar rc 
 OUT = push_swap
-all: ${NAME}
+all: ${NAME} .gcc
 
 ${NAME}: ${OBJS}
 	@${LIBC} ${NAME} ${OBJS}
-	@${CC} ${CFLAGS} -o ${OUT} push_swap.c ${NAME}
 
+.gcc:
+	@${CC} ${CFLAGS} -o ${OUT} push_swap.c ${NAME} -g
 .c.o:
 	@${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
 

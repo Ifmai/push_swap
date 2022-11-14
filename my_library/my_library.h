@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 00:46:33 by acerrah           #+#    #+#             */
-/*   Updated: 2022/11/14 05:10:55 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:03:59 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,31 +25,37 @@ typedef struct s_list
 {
 	int				content;
 	struct s_list	*next;
+	int				index;
 }					t_list;
 
 char	*ft_itoa(int n);
 void	*ft_calloc(size_t count, size_t size);
+void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 int		ft_atoi(const char *s);
 char	*ft_strdup(const char *s1);
-void	ft_putchar_fd(char c, int fd);
-void	ft_putstr_fd(char *s, int fd);
-void	ft_putnbr_fd(int n, int fd);
-t_list	*ft_lstnew(int content);
-void	ft_lstadd_front(t_list **lst, t_list *new);
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstlast(t_list *lst);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	*ft_memset(void *s, int c, size_t n);
 char	**ft_split(char const *s, char c);
-void	*ft_calloc(size_t count, size_t size);
-void	*ft_memset(void *s, int c, size_t n);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize);
-char	*ft_strdup(const char *s1);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
+
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
+
+t_list	*ft_lstnew(int content);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+
+t_list	*ft_lstlast(t_list *lst);
+int		ft_lstlast_int(t_list *lst);
+void	ft_lstlast_free(t_list **lst);
+
+int		ft_lstsize(t_list *lst);
+void	ft_lstdelone(t_list *lst, void (*del)(void*));
+
 
 
 t_list	*in_a(char **arg);

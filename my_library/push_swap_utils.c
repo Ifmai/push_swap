@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:45:54 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/14 04:57:36 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/14 16:04:23 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,17 +53,15 @@ t_list *in_a(char **arg)
 	int		arg_index_new;
 	
 	arg_index = 1;
-	a = malloc(sizeof(t_list));
+	a = NULL;
 	while(arg[arg_index] != 0)
 	{
 		arg_index_new = 0;
 		arg_new = ft_split(arg[arg_index],ft_check_sup(arg[arg_index]));
 		while(arg_new[arg_index_new])
 		{
-			if(arg_index == 1 && arg_index_new == 0)
-				a = ft_lstnew((ft_atoi(arg_new[arg_index_new])));
-			else
-				ft_lstadd_back(&a,ft_lstnew(ft_atoi(arg_new[arg_index_new])));
+			ft_lstadd_back(&a,ft_lstnew(ft_atoi(arg_new[arg_index_new])));
+			a->index = 0;
 			arg_index_new++;
 		}
 		free(arg_new);

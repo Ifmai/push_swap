@@ -2,6 +2,7 @@
 	"files.associations": {
 		"my_library.h": "c",
 		"__node_handle": "c",
-		"complex": "c"
+		"complex": "c",
+		"ifmai.h": "c"
 	}
 }

@@ -1,50 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstlast.c                                       :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 12:43:33 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/14 13:46:22 by hozdemir         ###   ########.fr       */
+/*   Created: 2022/11/14 09:38:36 by hozdemir          #+#    #+#             */
+/*   Updated: 2022/11/14 09:44:47 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #include "my_library.h"
 
-t_list	*ft_lstlast(t_list *lst)
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!lst)
-		return (NULL);
-	while (lst->next != NULL)
-	{
-		lst = lst->next;
-	}
-	return (lst);
-}
-
-int	ft_lstlast_int(t_list *lst)
-{
-	if (!lst)
-		return (0);
-	while (lst->next != NULL)
-	{
-		lst = lst->next;
-	}
-	return (lst -> content);
-}
-
-void	ft_lstlast_free(t_list **lst)
-{
-	t_list *iter;
-
-	iter = (*lst);
-	if (!lst)
+	if (!lst || !del)
 		return ;
-	while (iter->next->next != NULL)
-	{
-		iter = iter->next;
-	}
-	iter->next = NULL;
+	(*del)(lst->content);
+	free(lst);
 }
