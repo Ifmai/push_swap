@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 12:43:33 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/14 13:46:22 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/16 03:12:00 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,16 +35,13 @@ int	ft_lstlast_int(t_list *lst)
 	return (lst -> content);
 }
 
-void	ft_lstlast_free(t_list **lst)
+t_list	*ft_lstlast_back(t_list *lst)
 {
-	t_list *iter;
-
-	iter = (*lst);
 	if (!lst)
-		return ;
-	while (iter->next->next != NULL)
+		return (NULL);
+	while (lst->next->next != NULL)
 	{
-		iter = iter->next;
+		lst = lst->next;
 	}
-	iter->next = NULL;
+	return (lst);
 }

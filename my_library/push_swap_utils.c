@@ -6,16 +6,26 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:45:54 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/14 16:04:23 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/16 02:15:51 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_library.h"
 
-int true_false(int a, int b)
+int search_min_index(t_list *a,int size)
 {
-	return (a == b);
+	int min;
+
+	min = size;
+	while(a != NULL)
+	{
+		if(a->index <= min )
+			min = a->index;
+		a = a->next;
+	}
+	return (min);
 }
+
 
 void	ft_check_array(t_list *numbers)
 {

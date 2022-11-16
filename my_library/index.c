@@ -1,29 +1,49 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
+/*   index.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/11 02:55:22 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/16 01:06:44 by hozdemir         ###   ########.fr       */
+/*   Created: 2022/10/11 02:54:28 by hozdemir          #+#    #+#             */
+/*   Updated: 2022/11/16 02:16:18 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_library.h"
 
-void	ft_lstadd_back(t_list **lst, t_list *new)
+int search_min(t_list *a)
 {
-	if (!new || !lst)
-		return ;
-	if (!*lst)
+	int min;
+
+	min = 2147483647;
+	while(a != NULL)
 	{
-		(*lst) = new;
-		new ->back = new;
+		if(a->content <= min && a->index == 0)
+			min = a->content;
+		a = a->next;
 	}
-	else
+	return (min);
+}
+void	index_list(t_list *a, int size)
+{
+	t_list *curr;
+	int	i;
+	int	min;
+
+	i = 1;
+	min = search_min(a);
+	curr = a;
+	while(i != size + 1)
 	{
-		(ft_lstlast(*lst))->next = new;
-		new->back=ft_lstlast_back((*lst));
+		if(curr ->content == min)
+		{
+			curr->index = i;
+			min = search_min(a);
+			i++;
+		}
+		curr = curr->next;
+		if(!curr)
+			curr = a;
 	}
 }

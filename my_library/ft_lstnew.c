@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:56:00 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/13 22:54:27 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/16 00:54:23 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@ t_list	*ft_lstnew(int content)
 		return (0);
 	node->content = content;
 	node->next = NULL;
+	node->back = NULL;
 	return (node);
 }

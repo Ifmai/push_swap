@@ -3,6 +3,10 @@
 		"my_library.h": "c",
 		"__node_handle": "c",
 		"complex": "c",
-		"ifmai.h": "c"
-	}
+		"ifmai.h": "c",
+		"algorithm": "c",
+		"unistd.h": "c",
+		"stdio.h": "c"
+	},
+	"C_Cpp.errorSquiggles": "Disabled"
 }

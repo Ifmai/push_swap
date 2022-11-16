@@ -6,13 +6,11 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:54:28 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/14 04:20:36 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/15 21:17:22 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "my_library.h"
-
-
 
 int	ft_atoi(const char *s)
 {

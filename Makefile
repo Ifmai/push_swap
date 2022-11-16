@@ -17,7 +17,8 @@ SRCS =		my_library/ft_atoi.c \
 			my_library/error_message.c \
 			my_library/ft_isalpha.c \
 			my_library/ft_isdigit.c \
-			push_func.c
+			my_library/index.c \
+			push_func.c 
 
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap_lib.a
