@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:51:30 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/16 04:21:02 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/18 02:21:50 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,13 @@
 
 void print_list(t_list *a,t_list *b)
 {
+	printf("/////////////////////////////////////////\n");
 	while(a != NULL)
 	{
 		printf("a sayi : %d index : %d |\n",a->content ,a ->index);
 		a = a ->next;
 	}
+	printf("-------------------------------------\n");
 	while(b != NULL)
 	{
 		printf("b sayi : %d index : %d |\n",b->content ,b ->index);
@@ -26,31 +28,25 @@ void print_list(t_list *a,t_list *b)
 	}
 }
 
-t_list *sort_list_tree(t_list *a,t_list *b,int size)
+t_list *sort_list_tree(t_list *a,t_list *b)
 {
-	int	rot;
-	rot = serach_half_min(a,ft_lstsize(a));
-	while (a -> index != search_min_index(a,size))
-	{
-		if(rot == 0)
-			a = rra(a);
-		else
-			a = ra(a);
-	}
-	b = pb(&a,b);
-	if(a->index > a->next->index)
+	print_list(a,b);
+
+	while(!(a -> index < a -> next -> index && a -> index < a ->next -> next ->index) && ft_lstsize(a) != 2)
+		a = ra(a);
+	if(a -> index < a -> next -> index && a -> index < a ->next -> next ->index)
+		b = pb(&a,b);
+	if(a -> index > a -> next -> index)
 		sa(a);
-	while(b != NULL)
-	{
-		print_list(a,b);
+	while(ft_lstsize(b))
 		a = pa(&b,a);
-	}
 	return (a);
 }
 
 t_list *sort_list_four(t_list *a, t_list *b, int size)
 {
 	int	rot;
+	
 	rot = serach_half_min(a,ft_lstsize(a));
 	while (a -> index != search_min_index(a,size))
 	{
@@ -61,15 +57,14 @@ t_list *sort_list_four(t_list *a, t_list *b, int size)
 	}
 	if(check_sort_list(a,size))
 		exit(0);
-	b =pb(&a,b);
-	a = sort_list_tree(a, b, size);
+	b = pb(&a,b);
+	a = sort_list_tree(a, b);
 	return (a);
 }
 
 t_list *sort_list_five(t_list *a, t_list *b, int size)
 {
 	int	rot;
-	(void)size;
 	rot = serach_half_min(a,ft_lstsize(a));
 	while (a -> index != search_min_index(a,ft_lstsize(a)))
 	{
@@ -80,11 +75,11 @@ t_list *sort_list_five(t_list *a, t_list *b, int size)
 	}
 	if(check_sort_list(a,size))
 		exit(0);
-	b =pb(&a,b);
+	b = pb(&a,b);
 	a = sort_list_four(a, b, size);
 	return (a);
 }
-// 9 4 3
+
 
 
 int main(int count, char **arg)
@@ -99,17 +94,14 @@ int main(int count, char **arg)
 	if(size <= 1 && count)
 		return (0);
 	index_list(a,size);
-	if(check_sort_list(a,size))
-		exit(0);
-	if (size == 3)
-		a = sort_list_tree(a,b,size);
-	else if (size == 4)
+	if(size == 3 || size == 2)
+		a = sort_list_tree(a,b);
+	if(size == 4)
 		a = sort_list_four(a,b,size);
-	else if (size == 5)
+	if(size == 5)
 		a = sort_list_five(a,b,size);
-	while(a != NULL)
-	{
-		printf("a sayi : %d index : %d |\n",a->content ,a ->index);
-		a = a ->next;
-	}
+
+	print_list(a,b);
+	system("leaks push_swap");
+
 }

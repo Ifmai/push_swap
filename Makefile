@@ -5,6 +5,7 @@ SRCS =		my_library/ft_atoi.c \
 			my_library/ft_lstadd_front.c \
 			my_library/ft_lstsize.c \
 			my_library/ft_lstlast.c \
+			my_library/ft_lstclear.c \
 			my_library/ft_lstadd_back.c \
 			my_library/push_swap_utils.c \
 			my_library/ft_split.c \
@@ -41,9 +42,7 @@ clean:
 	@${RM} ${OBJS} ${BOBJS}
 
 fclean: clean
-	@${RM} ${NAME} push_swap
-	@clear
-	
+	@${RM} ${NAME} push_swap	
 
 re: fclean all
 

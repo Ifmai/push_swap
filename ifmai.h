@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:40:58 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/16 02:40:50 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/16 14:18:28 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@ void	sb(t_list *b);
 void	ss(t_list *a, t_list *b);
 int check_sort_list(t_list *a,int size);
 int serach_half_min(t_list *a, int size);
+
+void print_list(t_list *a,t_list *b);
+
 t_list	*pb(t_list **a, t_list *b);
 t_list	*pa(t_list **b, t_list *a);
 t_list	*ra(t_list *a);

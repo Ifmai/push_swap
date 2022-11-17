@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 01:39:08 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/14 04:51:52 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/18 02:23:59 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int ft_check_sup(char *s)
 	i = 0;
 	while (s[i] != '\0')
 	{
-		if(!(ft_isdigit(s[i])) && !(ft_isalpha(s[i])) && s[i] != 32)
+		if(!(ft_isdigit(s[i])) && !(ft_isalpha(s[i])) && s[i] != 32 && s[i] != '+' && s[i] != '-')
 			arg_split();
 		i++;
 	}

@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:45:54 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/16 02:15:51 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/17 21:22:00 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,6 +53,7 @@ void	ft_check_array(t_list *numbers)
 			j++;
 		}
 	}
+	free(check_array);
 }
 
 t_list *in_a(char **arg)
@@ -61,7 +62,7 @@ t_list *in_a(char **arg)
 	char	**arg_new;
 	int		arg_index;
 	int		arg_index_new;
-	
+
 	arg_index = 1;
 	a = NULL;
 	while(arg[arg_index] != 0)
@@ -69,9 +70,14 @@ t_list *in_a(char **arg)
 		arg_index_new = 0;
 		arg_new = ft_split(arg[arg_index],ft_check_sup(arg[arg_index]));
 		while(arg_new[arg_index_new])
+		{	
+			ft_lstadd_back(&a,ft_lstnew(ft_atoi(arg_new[arg_index_new]),0));
+			arg_index_new++;
+		}
+		arg_index_new = 0;
+		while(arg_new[arg_index_new])
 		{
-			ft_lstadd_back(&a,ft_lstnew(ft_atoi(arg_new[arg_index_new])));
-			a->index = 0;
+			free(arg_new[arg_index_new]);
 			arg_index_new++;
 		}
 		free(arg_new);

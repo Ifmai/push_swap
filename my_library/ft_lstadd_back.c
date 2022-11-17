@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:55:22 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/16 01:06:44 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/16 09:16:20 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,7 @@ void	ft_lstadd_back(t_list **lst, t_list *new)
 	if (!new || !lst)
 		return ;
 	if (!*lst)
-	{
 		(*lst) = new;
-		new ->back = new;
-	}
 	else
 	{
 		(ft_lstlast(*lst))->next = new;
