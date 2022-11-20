@@ -19,6 +19,7 @@ SRCS =		my_library/ft_atoi.c \
 			my_library/ft_isalpha.c \
 			my_library/ft_isdigit.c \
 			my_library/index.c \
+			sort_push_lst.c \
 			push_func.c 
 
 OBJS = ${SRCS:.c=.o}

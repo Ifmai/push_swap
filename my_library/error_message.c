@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 01:39:08 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/18 02:23:59 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/20 04:46:08 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ void	arg_alphabet_error(void)
 
 void	arg_split(void)
 {
-	ft_putstr_fd("Geçersiz Kelime Ayarçı Kullanımı", 1);
+	ft_putstr_fd("Geçersiz Kelime Ayraç Kullanımı", 1);
 	exit(0);
 }
 
