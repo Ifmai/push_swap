@@ -6,11 +6,11 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:22:00 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/17 22:15:40 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/26 23:58:13 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ifmai.h"
+#include "my_library.h"
 
 void	sa(t_list *a)
 {

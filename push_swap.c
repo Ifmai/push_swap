@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:51:30 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/20 04:46:24 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/27 00:09:33 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,8 +101,7 @@ int main(int count, char **arg)
 	else if(size == 5)
 		a = sort_list_five(a,b,size);
 	else 
-		a = sort_list(a, b, size);
+		a = sort_list(a, b);
 	//print_list(a,b);
-	system("leaks push_swap");
 
 }

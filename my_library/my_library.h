@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 00:46:33 by acerrah           #+#    #+#             */
-/*   Updated: 2022/11/17 21:21:18 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/27 17:13:01 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,7 +59,6 @@ void	ft_lstdelone(t_list *lst, void (*del)(int));
 void	ft_lstclear(t_list **lst);
 
 
-
 t_list	*in_a(char **arg);
 void	arg_alphabet_error(void);
 void	arg_split(void);
@@ -71,5 +70,22 @@ void    error_same_digit(void);
 int		search_min(t_list *a);
 int		search_min_index(t_list *a,int size);
 void	index_list(t_list *a, int size);
+
+void	sa(t_list *sort_list);
+void	sb(t_list *b);
+void	ss(t_list *a, t_list *b);
+
+t_list	*pb(t_list **a, t_list *b);
+t_list	*pa(t_list **b, t_list *a);
+t_list	*ra(t_list *a);
+t_list	*rb(t_list *b);
+t_list *rra(t_list *a);
+t_list *rrb(t_list *b);
+
+int check_sort_list(t_list *a,int size);
+int serach_half_min(t_list *a, int size);
+
+int	firsrt_or_secend(t_list *a, int _50);
+t_list *push_50_arguman(t_list *a, t_list **b, int size);
 
 #endif

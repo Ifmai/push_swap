@@ -8,7 +8,8 @@
 		"unistd.h": "c",
 		"stdio.h": "c",
 		"stdlib.h": "c",
-		"chrono": "c"
+		"chrono": "c",
+		"stddef.h": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }
