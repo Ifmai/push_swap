@@ -6,13 +6,13 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:51:30 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/27 00:09:33 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/30 00:56:07 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ifmai.h"
 
-void print_list(t_list *a,t_list *b)
+void print_list(t_list *a)
 {
 	printf("/////////////////////////////////////////\n");
 	while(a != NULL)
@@ -21,11 +21,6 @@ void print_list(t_list *a,t_list *b)
 		a = a ->next;
 	}
 	printf("-------------------------------------\n");
-	while(b != NULL)
-	{
-		printf("b sayi : %d index : %d |\n",b->content ,b ->index);
-		b = b ->next;
-	}
 }
 
 t_list *sort_list_tree(t_list *a,t_list *b, int size)

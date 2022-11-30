@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:22:00 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/26 23:58:13 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/30 15:47:21 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,35 +126,3 @@ t_list *rrb(t_list *b)
 	return (b);
 }
 
-int check_sort_list(t_list *a,int size)
-{
-	int	i;
-
-	i = 1;
-	while(i <= size)
-	{
-		if(a->index != i)
-			return 0;
-		a = a->next;
-		i++;
-	}
-	return (1);
-}
-
-int serach_half_min(t_list *a, int size)
-{
-	int	i;
-	t_list *curr;
-
-	curr = a;
-
-	i = 1;
-	while(i <= size / 2)
-	{
-		if(curr->index == search_min_index(a,size))
-			return (1);
-		curr = curr->next;
-		i++;
-	}
-	return (0);
-}

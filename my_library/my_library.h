@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 00:46:33 by acerrah           #+#    #+#             */
-/*   Updated: 2022/11/27 17:13:01 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/30 19:35:49 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -83,9 +83,12 @@ t_list *rra(t_list *a);
 t_list *rrb(t_list *b);
 
 int check_sort_list(t_list *a,int size);
+int check_sort_list_2(t_list *a);
 int serach_half_min(t_list *a, int size);
 
-int	firsrt_or_secend(t_list *a, int _50);
+int	firsrt_or_sec_a(t_list *a, int _50);
+int	firsrt_or_sec_search(t_list *a, int search_index);
 t_list *push_50_arguman(t_list *a, t_list **b, int size);
+int max_index(t_list *curr , int search_index);
 
 #endif

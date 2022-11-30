@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:40:58 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/27 00:09:42 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/11/30 00:56:17 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 
 
-void print_list(t_list *a,t_list *b);
+void print_list(t_list *a);
 
 t_list *sort_list_tree(t_list *a,t_list *b, int size);
 t_list *sort_list_four(t_list *a, t_list *b, int size);
