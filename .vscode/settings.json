@@ -9,7 +9,9 @@
 		"stdio.h": "c",
 		"stdlib.h": "c",
 		"chrono": "c",
-		"stddef.h": "c"
+		"stddef.h": "c",
+		"limits": "c",
+		"ratio": "c"
 	},
 	"C_Cpp.errorSquiggles": "Disabled"
 }

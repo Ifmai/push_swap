@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 00:46:33 by acerrah           #+#    #+#             */
-/*   Updated: 2022/11/30 19:35:49 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:40:44 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,7 @@ int 	ft_check_int(long a);
 void    error_same_digit(void);
 int		search_min(t_list *a);
 int		search_min_index(t_list *a,int size);
+int		search_max_index(t_list *curr);
 void	index_list(t_list *a, int size);
 
 void	sa(t_list *sort_list);

@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:45:54 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/19 13:42:56 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/05 17:41:57 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,20 @@ int search_min_index(t_list *a,int size)
 		a = a->next;
 	}
 	return (min);
+}
+
+int search_max_index(t_list *curr)
+{
+	int max;
+
+	max = 1;
+	while(curr != NULL)
+	{
+		if (max <= curr ->index)
+			max = curr -> index;
+		curr = curr -> next;
+	}
+	return (max);
 }
 
 
