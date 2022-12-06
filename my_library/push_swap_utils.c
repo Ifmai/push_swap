@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 23:45:54 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/05 17:41:57 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/06 02:27:30 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,4 +99,4 @@ t_list *in_a(char **arg)
 	}
 	ft_check_array(a);
 	return (a);
-}
+}	

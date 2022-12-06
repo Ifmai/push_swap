@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:47:00 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/06 01:17:00 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/06 02:42:35 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,19 @@ t_list *sort_20(t_list *a, t_list **b, int _20, int _100)
 		while (a -> index > _20)
 		{
 			if(rot == 1)
-				a = ra(a);
+			{
+				if (*b && (*b)->index < search_max_index(*b) - 15)
+					a = rr(a, b);
+				else
+					a = ra(a,1);
+			}
 			else if (rot == 2)
-				a = rra(a);
+			{
+				if (*b && (*b)->index < search_max_index(*b) - 15)
+					a = rrr(a, b);
+				else
+					a = rra(a,1);
+			}
 			else
 				break;
 		}
@@ -49,9 +59,9 @@ t_list *sort_a_full(t_list *a, t_list **b, int _100)
 		while((*b) -> index != max_index_b)
 		{
 			if(rot == 1)
-				(*b) = rb((*b));
+				(*b) = rb((*b), 1);
 			else if (rot == 2)
-				(*b) = rrb((*b));
+				(*b) = rrb((*b), 1);
 			else
 				break;
 		}
@@ -93,9 +103,9 @@ t_list *sort_a_big_full(t_list *a, t_list **b,int _100)
 			{
 				rot = firsrt_or_sec_search(a,min);
 				if(rot == 1)
-					a = ra(a);
+					a = ra(a, 1);
 				else if (rot == 2)
-					a = rra(a);
+					a = rra(a, 1);
 				else
 					break;
 			}
@@ -118,27 +128,25 @@ t_list *sort_a_big_full(t_list *a, t_list **b,int _100)
 t_list *sort_list(t_list *a, t_list *b)
 {
 	int _20;
-	int _80;
 	int _100;
 
 	_100 = ft_lstsize(a);
-	_80 = ft_lstsize(a) * 0.84;
 	while(ft_lstsize(a) > 1)
 	{
-		_20 = (ft_lstsize(a) * 0.1) + ft_lstsize(b);
+		_20 = (ft_lstsize(a) * 0.14) + ft_lstsize(b);
 
-		if((ft_lstsize(a) * 0.1) >= 1 && _20 <= _80)
+		if((ft_lstsize(a) * 0.14) >= 1 && _20)
 			a = sort_20(a, &b, _20, _100);
 		else
 		{
 			if(a -> index == _100)
-				a = ra(a);
+				a = ra(a, 1);
 			b = pb(&a,b);
 		}
 	}
 	if(_100 <= 100)
 		a = sort_a_full(a,&b,_100);
 	else
-		a = sort_a_big_full(a,&b,_100);
+		a = sort_a_full(a,&b,_100);
 	return (a);
 }

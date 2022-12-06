@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 00:46:33 by acerrah           #+#    #+#             */
-/*   Updated: 2022/12/05 17:40:44 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/06 01:58:06 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,16 +72,18 @@ int		search_min_index(t_list *a,int size);
 int		search_max_index(t_list *curr);
 void	index_list(t_list *a, int size);
 
-void	sa(t_list *sort_list);
-void	sb(t_list *b);
+void	sa(t_list *sort_list, int flag);
+void	sb(t_list *b, int flag);
 void	ss(t_list *a, t_list *b);
 
 t_list	*pb(t_list **a, t_list *b);
 t_list	*pa(t_list **b, t_list *a);
-t_list	*ra(t_list *a);
-t_list	*rb(t_list *b);
-t_list *rra(t_list *a);
-t_list *rrb(t_list *b);
+t_list	*ra(t_list *a, int flag);
+t_list	*rb(t_list *b, int flag);
+t_list *rra(t_list *a, int flag);
+t_list *rrb(t_list *b, int flag);
+t_list *rr(t_list *a, t_list **b);
+t_list *rrr(t_list *a, t_list **b);
 
 int check_sort_list(t_list *a,int size);
 int check_sort_list_2(t_list *a);
