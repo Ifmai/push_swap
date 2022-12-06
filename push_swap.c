@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:51:30 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/06 01:50:29 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/06 05:53:13 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,6 +97,4 @@ int main(int count, char **arg)
 		a = sort_list_five(a,b,size);
 	else 
 		a = sort_list(a, b);
-	//print_list(a,b);
-
 }

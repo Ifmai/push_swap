@@ -26,7 +26,7 @@ SRCS =		my_library/ft_atoi.c \
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap_lib.a
 CC = gcc
-CFLAGS = -Wall -Werror -Wextra -fsanitize=address -g
+CFLAGS = -Wall -Werror -Wextra -g
 RM = rm -rf
 LIBC = ar rc 
 OUT = push_swap
