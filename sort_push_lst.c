@@ -6,11 +6,12 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:47:00 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/12 12:39:53 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/15 08:19:50 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ifmai.h"
+#include <stdio.h>
 
 t_list *sort_20(t_list *a, t_list **b, int _20, int _100, int x, int rot, int indexx)
 {
@@ -40,7 +41,7 @@ t_list *sort_20(t_list *a, t_list **b, int _20, int _100, int x, int rot, int in
 	return (a);
 }
 
-t_list *a_sorting(t_list *a, t_list **b, int _100)
+t_list *a_sorting(t_list *a, int _100)
 {
 	static int i;
 	int rot;
@@ -51,24 +52,20 @@ t_list *a_sorting(t_list *a, t_list **b, int _100)
 	{
 		rot = a->index <= firsrt_or_sec_search(a,(_100 - i));
 		if(rot == 1)
-		{
-			if (*b && (*b)->index != search_max_index(*b))
-				a = rr(a, b);
-			else
-				a = ra(a,1);
-		}
+			a = ra(a,1);
 	}
 	if(a->index == _100 - i)
 		i++;
 	return (a);
 }
 
+
 t_list *sort_500_full(t_list *a, t_list **b, int _100, int rot)
 {
 	while((*b) != NULL)
 	{
-		rot = a_min_b_firsrt_or_sec((*b),a->index - 5);
-		while( (*b) != NULL &&(*b)->index < a->index - 5)
+		rot = a_min_b_firsrt_or_sec((*b),search_min_index(a,_100));
+		while( (*b) != NULL && (*b)->index < search_min_index(a,_100))
 		{
 			if(rot == 1)
 				(*b) = rb((*b),1);
@@ -78,7 +75,7 @@ t_list *sort_500_full(t_list *a, t_list **b, int _100, int rot)
 				break;
 		}
 		a = pa(&(*b),a);
-		a = a_sorting(a,b,_100);
+		a = a_sorting(a,_100);
 	}
 	return (a);
 }

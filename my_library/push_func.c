@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/14 09:22:00 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/11 21:58:22 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/15 03:53:34 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,8 @@ void	ss(t_list *a, t_list *b)
 
 t_list *pb(t_list **a, t_list *b)
 {
+	if((*a) == NULL)
+		return (0);
 	t_list *freez;
 
 	freez = (*a);
@@ -63,6 +65,8 @@ t_list *pb(t_list **a, t_list *b)
 
 t_list *pa(t_list **b, t_list *a)
 {
+	if((*b) == NULL)
+		return (0);
 	t_list *freez;
 
 	freez = (*b);
