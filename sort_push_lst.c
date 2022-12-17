@@ -6,12 +6,11 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 11:47:00 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/15 16:58:19 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/17 17:51:42 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ifmai.h"
-#include <stdio.h>
 
 t_list	*sort_20(t_list *a, t_list **b, int _20,
 	int _100, int x, int rot, int indexx)

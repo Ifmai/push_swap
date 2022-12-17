@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:51:30 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/15 17:34:53 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/17 17:51:39 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,3 +34,4 @@ int	main(int count, char **arg)
 		a = sort_list(a, b, size);
 	system("leaks push_swap");
 }
+
