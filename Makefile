@@ -27,14 +27,14 @@ SRCS =		my_library/ft_atoi.c \
 
 OBJS = ${SRCS:.c=.o}
 NAME = push_swap_lib.a
-CC = gcc -g
+CC = gcc 
 CFLAGS = -Wall -Werror -Wextra 
 RM = rm -rf
 LIBC = ar rc 
 OUT = push_swap
-all: ${NAME}
+all: ${NAME} .gcc
 
-${NAME}: ${OBJS}
+${NAME}: ${OBJS} 
 	@${LIBC} ${NAME} ${OBJS}
 
 .gcc:

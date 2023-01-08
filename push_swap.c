@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/13 22:51:30 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/17 17:51:39 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/08 08:47:52 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,14 +24,10 @@ int	main(int count, char **arg)
 	if (size <= 1 && count)
 		return (0);
 	index_list(a, size);
-	if (size == 3 || size == 2)
-		a = sort_list_tree(a, b);
-	else if (size == 4)
+	if (check_sort_list(a))
+		exit(0);
+	if (size < 6)
 		a = sort_list_four(a, b, size);
-	else if (size == 5)
-		a = sort_list_five(a, b, size);
 	else
 		a = sort_list(a, b, size);
-	system("leaks push_swap");
 }
-

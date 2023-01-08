@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:56:59 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/14 02:06:11 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:13:40 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ size_t	ft_word_count(char const *s, char c)
 {
 	size_t	i;
 	size_t	rtn;
-	
+
 	if (c != 32)
 		arg_split();
 	i = 0;

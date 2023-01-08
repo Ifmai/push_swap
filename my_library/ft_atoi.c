@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 02:54:28 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/11/15 21:17:22 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/08 09:15:27 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *s)
 	back = 0;
 	np = 1;
 	i = 0;
-	if(ft_check_str(s))
+	if (ft_check_str(s))
 		arg_alphabet_error();
 	while ((s[i] <= 13 && s[i] >= 9) || s[i] == 32)
 		i++;
